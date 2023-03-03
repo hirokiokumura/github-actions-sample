@@ -1,0 +1,12 @@
+name: CheckOut  # このworkflowの名前
+
+on: # onで実行タイミングを設定
+  workflow_dispatch: # 手動で実行するAction
+
+jobs:
+  job名:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
